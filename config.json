@@ -1,6 +1,6 @@
 {
-    "accountid": "284929",
-    "apikey": "C3KuhuBZJ-SPmHxXjVvSRVMvSl42xYWV",
+    "accountid": "put_your_account_ID_here",
+    "apikey": "put_your_Insights_API_INSERT_key_here",
     "logfile": "/var/log/system.log",
     "match": "(\\w{3}[0-9\\s:]+)(\\S+)\\s([^\\[]+)\\[(\\d+)\\]:(.*)",
     "headers": [
