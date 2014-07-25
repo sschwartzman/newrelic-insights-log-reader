@@ -1,16 +1,8 @@
-
-
 # Guybrush
 
+## Intro
 
-
-## Usage
-
-
-
-## Developing
-
-
+This will have some stuff about what this thing does. It's gonna be great.
 
 ### Tools
 
