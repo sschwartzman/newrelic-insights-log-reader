@@ -1,0 +1,37 @@
+Jul 25 13:04:51 your-mbp kernel[0]: ASP_TCP Disconnect: triggering reconnect by bumping reconnTrigger from curr value 0 on so 0xffffff803d0e4b28
+Jul 25 13:04:51 your-mbp kernel[0]: ASP_TCP Detach: Reply queue not empty?
+Jul 25 13:04:51 your-mbp.local com.apple.backupd[5911]: Ejected Time Machine network volume.
+Jul 25 13:04:51 your-mbp.local com.apple.backupd[5911]: Waiting 60 seconds and trying again.
+Jul 25 13:05:08 your-mbp.local Vox Helper[332]: Non of media apps is launched
+Jul 25 13:05:20 your-mbp.local MPlayerX[6166]: SUUpdater: no update
+Jul 25 13:05:57 your-mbp.local com.apple.backupd[5911]: Attempting to mount network destination URL: afp://You@SCloud._afpovertcp._tcp.local/yourBackup
+Jul 25 13:05:57 your-mbp kernel[0]: ASP_TCP CheckReqQueueSize: increasing req queue from 32 to 128 entries. so 0xffffff802c4917c8 
+Jul 25 13:05:57 your-mbp.local com.apple.backupd[5911]: Mounted network destination at mount point: /Volumes/yourBackup using URL: afp://You@SCloud._afpovertcp._tcp.local/yourBackup
+Jul 25 13:05:57 your-mbp.local mds[66]: (Normal) Volume: volume:0x7f96db80c000 ********** Bootstrapped Creating a default store:0 SpotLoc:(null) SpotVerLoc:(null) occlude:0 /Volumes/yourBackup
+Jul 25 13:06:30 your-mbp.local com.apple.backupd[5911]: Disk image already attached: /Volumes/yourBackup/you mbp.sparsebundle, DIHLDiskImageAttach returned: 35
+Jul 25 13:06:31 your-mbp.local com.apple.backupd[5911]: Failed to mount disk image: Error Domain=com.apple.backupd.ErrorDomain Code=31 "The operation couldn’t be completed. (com.apple.backupd.ErrorDomain error 31.)" UserInfo=0x7fd513a2f040 {MessageParameters=(
+	    
+Jul 25 13:06:31 your-mbp kernel[0]: AFP_VFS afpfs_unmount: /Volumes/yourBackup, flags 0, pid 6180
+Jul 25 13:06:31 your-mbp kernel[0]: ASP_TCP Disconnect: triggering reconnect by bumping reconnTrigger from curr value 0 on so 0xffffff802c4917c8
+Jul 25 13:06:31 your-mbp kernel[0]: ASP_TCP Detach: Reply queue not empty?
+Jul 25 13:06:31 your-mbp.local com.apple.backupd[5911]: Ejected Time Machine network volume.
+Jul 25 13:06:31 your-mbp.local com.apple.backupd[5911]: Waiting 60 seconds and trying again.
+Jul 25 13:06:32 your-mbp.local WindowServer[124]: CGXSetWindowListSystemAlpha: Invalid window 3450 (index 0/1)
+Jul 25 13:06:36 your-mbp.local Vox Helper[332]: Non of media apps is launched
+Jul 25 13:06:59 --- last message repeated 1 time ---
+Jul 25 13:06:59 your-mbp.local NetAuthSysAgent[6196]: ERROR: AFP_OpenSession - Login failed with 45 
+Jul 25 13:07:00 your-mbp kernel[0]: ASP_TCP CheckReqQueueSize: increasing req queue from 32 to 128 entries. so 0xffffff802b736000 
+Jul 25 13:07:01 your-mbp.local mds[66]: (Normal) Volume: volume:0x7f96da098e00 ********** Bootstrapped Creating a default store:1 SpotLoc:(null) SpotVerLoc:(null) occlude:0 /Volumes/iTunes
+Jul 25 13:07:03 your-mbp.local NetAuthSysAgent[6196]: TAFPSession::GetSocket wrong call should be TSocketAFPSession
+Jul 25 13:07:04 your-mbp kernel[0]: AFP_VFS afpfs_unmount: /Volumes/Datastore, flags 0, pid 6190
+Jul 25 13:07:05 your-mbp.local NetAuthSysAgent[6196]: TAFPSession::GetSocket wrong call should be TSocketAFPSession
+Jul 25 13:07:06 your-mbp.local mds[66]: (Normal) Volume: volume:0x7f96da1b9800 ********** Bootstrapped Creating a default store:1 SpotLoc:(null) SpotVerLoc:(null) occlude:0 /Volumes/Datastore
+Jul 25 13:07:06 your-mbp.local NetAuthSysAgent[6196]: TAFPSession::GetSocket wrong call should be TSocketAFPSession
+Jul 25 13:07:06 your-mbp.local mds[66]: (Normal) Volume: volume:0x7f96dd097000 ********** Bootstrapped Creating a default store:1 SpotLoc:(null) SpotVerLoc:(null) occlude:0 /Volumes/yourBackup
+Jul 25 13:07:06 your-mbp kernel[0]: AFP_VFS afpfs_unmount: /Volumes/yourBackup, flags 0, pid 6190
+Jul 25 13:07:06 your-mbp.local mds[66]: ERROR: _MDSChannelInitForAFP: afpfsGetMountInfoFSCTL failed
+Jul 25 13:07:06 your-mbp.local mds[66]: (Error) Volume: sysctl_queryfs failed: No such file or directory
+Jul 25 13:07:06 --- last message repeated 1 time ---
+Jul 25 13:07:06 your-mbp.local mds[66]: (Error) Server: Failed to register path "/" to store <MDSStoreToken: 0x7f96da89f8f0>{storeID:0x6b000072 registered:NO private:NO age:NA uuid:D03E5CF4-4185-4EAA-A21A-B249DDA17B72}
+Jul 25 13:07:06 your-mbp.local NetAuthSysAgent[6196]: TAFPSession::GetSocket wrong call should be TSocketAFPSession
+Jul 25 13:07:06 your-mbp.local mds[66]: (Normal) Volume: volume:0x7f96da193000 ********** Bootstrapped Creating a default store:1 SpotLoc:(null) SpotVerLoc:(null) occlude:0 /Volumes/yourBackup

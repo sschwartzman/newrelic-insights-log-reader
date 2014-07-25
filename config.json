@@ -1,0 +1,13 @@
+{
+    "accountid": "284929",
+    "apikey": "C3KuhuBZJ-SPmHxXjVvSRVMvSl42xYWV",
+    "logfile": "/var/log/system.log",
+    "match": "(\\w{3}[0-9\\s:]+)(\\S+)\\s([^\\[]+)\\[(\\d+)\\]:(.*)",
+    "headers": [
+        "date",
+        "host",
+        "process",
+        "pid",
+        "message"
+    ]
+}
