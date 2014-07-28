@@ -5,23 +5,33 @@ var Insights = require('insights')
 
 var cfile = __dirname + "/config.json";
 var config = JSON.parse(fs.readFileSync(cfile));
+var bookmark = 0; //Start at beginning of log unless otherwise spec'd
 
 if(!config.match || !config.accountid || !config.apikey || !config.logfile || !config.headers) {
-	console.log('There are missing config options in ' + cfile);
+	console.log("There are missing config options in " + cfile);
 	return;
 }
 
 var insights = new Insights(config.accountid, config.apikey, {max_events: 50, min_events: 10});
 
 if (!fs.existsSync(config.logfile)) {
-	console.log('There has been an error reading ' + config.logfile);
+	console.log("There has been an error reading " + config.logfile);
 	return;
 }
 
-var tail = new Tail(config.logfile, '\n');
+if(config.newmsgs) {
+	var stats = fs.statSync(config.logfile);
+	bookmark = stats.size;
+	console.log("Starting log reading at byte " + stats.size);
+} else {
+	console.log("Starting log reading at beginning of file.");
+}
+
+//var tail = new Tail(config.logfile, '\n', ); 
+var tail = new Tail(config.logfile, '\n', { start: bookmark,  interval: 10000 });
 
 tail.on('line', function(data) {
-	//console.log("got line:", data);
+	// console.log("got line:", data); //Debug
 	if (!data.length) { return; }
 	try {
 		var insight = {};
@@ -31,10 +41,10 @@ tail.on('line', function(data) {
 			insight[header] = trim(captured[i]);
 			i++;
 		});
-		console.debug(insight);
+		// console.log(insight); //Debug
 		insights.addEvent('LogEvent', insight);
 	} catch (err) {
-		//console.debug(err);
+		// console.log(err); //Debug
 	}
 });
 

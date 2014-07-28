@@ -1,0 +1,6 @@
+
+*.log
+
+config.json
+
+*.err

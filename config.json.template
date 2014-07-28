@@ -1,6 +1,6 @@
 {
-    "accountid": "put_your_account_ID_here",
-    "apikey": "put_your_Insights_API_INSERT_key_here",
+    "accountid": "Insert your account ID here",
+    "apikey": "Insert your Insights API INSERT key here",
     "logfile": "/var/log/system.log",
     "match": "(\\w{3}[0-9\\s:]+)(\\S+)\\s([^\\[]+)\\[(\\d+)\\]:(.*)",
     "headers": [
@@ -9,5 +9,6 @@
         "process",
         "pid",
         "message"
-    ]
+    ],
+    "newmsgs": true
 }
