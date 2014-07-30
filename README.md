@@ -29,8 +29,8 @@
 
 #### Required settings
 
-* `accountid` - Your account ID, which can be found in any New Relic RPM or Insights URL in the format: http://insights.newrelic.com/<account_id>/...
-* `apikey` - Your API Insert Key, which is created and saved here: https://insights.newrelic.com/accounts/<account_id>/manage/api_keys
+* `accountid` - Your account ID, which can be found in any New Relic RPM or Insights URL in the format: http://insights.newrelic.com/{account_id}/...
+* `apikey` - Your API Insert Key, which is created and saved here: https://insights.newrelic.com/accounts/{account_id}/manage/api_keys
 * `logfile` - Path and name of the log file you wish to tail.
 * `match` - Regular Expression used to search your log file. Read below in [Regex-ing Your Log](#regex) for details.
 * `headers` - Column names for matched fields in a line of your log file.
