@@ -1,16 +1,11 @@
 # Guybrush
-
-## Guybrush: Log Reader for New Relic Insights
-
-----
+## A Log Reader for New Relic Insights
 
 ### Requirements
 
 - A New Relic Insights account. Sign up for a free account [here](http://newrelic.com)
 - node.js: http://nodejs.org/download/
 - Network access to New Relic (proxies are supported, see details below)
-
-----
 
 ### Installation & Usage Overview
 
@@ -29,7 +24,6 @@
   * [Building Dashboards](https://docs.newrelic.com/docs/insights/new-relic-insights/managing-dashboards-and-data/building-insights-dashboards)
   * [Editing Dashboards](https://docs.newrelic.com/docs/insights/new-relic-insights/managing-dashboards-and-data/editing-insights-dashboards)
   * [Using Widgets](https://docs.newrelic.com/docs/insights/new-relic-insights/managing-dashboards-and-data/using-widgets)
-----
 
 ### <a name="configjson"></a> Configuring the `config.json` file
 
