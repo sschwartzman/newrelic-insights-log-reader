@@ -4,3 +4,9 @@
 config.json
 
 *.err
+
+*.backup
+
+config.json.p*
+
+*.out
