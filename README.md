@@ -12,8 +12,8 @@
 1. Download the latest version of the agent: https://github.com/sschwartzman/guybrush/archive/master.zip
 2. Unzip on the server server that you want to monitor
 3. Configure `config/config.json` 
-  * Start by copying config.json.template OR your pre-built config.json to `config/config.json`.
-  * [Click here for config.json config details](#configjson)
+  * Start by copying `config.json.template` OR your pre-built `config.json` to `config/config.json`.
+  * [Click here for `config.json` configuration details](#configjson)
 4. Start agent using either the node command-line, or a wrapper package like [forever](https://github.com/nodejitsu/forever)
   * `nohup node /path/to/guybrush.js > /path/to/guybrush.log 2>&1 &`
   * Directions for usage with [forever](https://github.com/nodejitsu/forever) coming soon...
