@@ -1,0 +1,37 @@
+{
+    "accountid": "Insert your account ID here",
+    "apikey": "Insert your Insights API INSERT key here",
+    "logfile": "/var/log/system.log",
+    "parsers": [
+        {
+            "name": "My 1st Parser",
+            "comment": "Aug  4 12:57:04 your-mbp.local com.apple.backupd[7704]: Found 509 files (181.6 MB) needing backup",
+            "match": "(\\w{3}[0-9\\s:]+)(\\S+)\\s([^\\[]+)\\[(\\d+)\\]:(.*)",
+            "headers": [
+                "timestamp",
+                "host",
+                "process",
+                "pid",
+                "message"
+            ],
+            "eventtype": "LogEvent"
+        },
+        {
+            "name": "Example Java App Parser",
+            "comment": "2014-07-30 00:14:06 PDT [Thread-3] - ERROR [com.yourapp.yourclass] java.net.SocketTimeoutException: Read timed out",
+            "match": "(\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}\\s[A-Z]{3})\\s\\[Thread-(\\d+)\\]\\s-\\s(INFO|ERROR)\\s\\[([\\w\\.]+)\\]\\s(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "level",
+                "class",
+                "message"
+            ],
+            "eventtype": "JavaLogEvent"
+        }
+    ],
+    "newmsgs": true,
+    "send_interval": 10,
+    "send_max_events": 50,
+    "send_min_events": 5
+}

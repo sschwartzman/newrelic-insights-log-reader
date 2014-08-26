@@ -1,0 +1,143 @@
+{
+    "accountid": "Insert your account ID here",
+    "apikey": "Insert your Insights API INSERT key here",
+    "logfile": "/path/to/telif.1234567890.dbg",
+    "parsers": [
+        {
+        	"name": "Pearson-telif-1",
+        	"comment": "2014/07/31 00:00:56.646 GMT (46132) dtiB1T13.telif::SetRecordParams.need_beep=0, need_beep_end=0, mindtmf=1, maxdtmf=1",
+        	"match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([a-z]+\\w+)\\.(\\w+)::(\\w+)\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "line",
+                "func",
+                "subfunc",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-2",
+        	"comment": "2014/07/31 00:00:45.693 GMT (46132) dtiB1T13.Play       .Added cue2 13700F68 to the PlayBuffer",
+            "match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([a-z]+\\w+)\\.(\\w+)\\s+\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "line",
+                "func",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-3",
+        	"comment": "2014/07/31 16:45:08.043 GMT (57200) dtiB1T20.GetCallInfo. Length = 6 Protocol: 0x00  IE: 0x04, 0x03, 0x90, 0x90, 0xA2, 0x18.",
+            "match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([a-z]+\\w+)\\.(\\w+)\\.+\\s+(\\w+.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "line",
+                "func",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-4",
+            "comment": "2014/07/31 00:00:45.693 GMT (46132) dtiB1T13.telif.Play .dx_play done, tcontext = 1224CFB0",
+            "match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([a-z]+\\w+)\\.([A-Z]+\\w+)\\.([A-Z]+\\w+)\\s*\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "line",
+                "func",
+                "subfunc",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	
+        	"name": "Pearson-telif-5",
+            "comment": "2014/07/31 09:12:41.668 GMT (42576) dtiB1T23.GetResponse.Question 20.660",
+            "match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([a-z]+\\w+)\\.([A-Z]+\\w+)\\.+([^\\.\\s]+\\s+[^\\s\\.]+.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "line",
+                "func",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {    	
+        	"name": "Pearson-telif-6",
+            "comment": "2014/07/31 00:00:56.646 GMT (46132) Recording           ..Recording for cue 7516 with L1=ENG, L2=ENG: not found",
+            "match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([A-Z]+\\w+)\\s+\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "func",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-7",
+            "comment": "2014/07/31 23:57:47.477 GMT (107848) PinData::UpdateUsedPins.Updated 1 used pins.",
+            "match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([A-Z]+\\w+)::([A-Z]+\\w+)\\s*\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "func",
+                "subfunc",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-8",
+        	"comment": "2014/07/31 00:00:42.583 GMT (46132) PlayBuffer.AddCue   .Matched cue 7196(ENG,ENG) to rec 7598(,)",
+        	"match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([A-Z]+\\w+)\\.([\\w~]+)\\s+\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "func",
+                "subfunc",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-9",
+        	"comment": "2014/07/31 09:12:45.838 GMT (50408) SatData.AddReference.Added reference to SatData 1140; refcnt now 5)",
+        	"match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s([A-Z]+\\w+)\\.+([A-Z]+\\w+)\\.+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "func",
+                "subfunc",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        },
+        {
+        	"name": "Pearson-telif-10",
+        	"comment": "2014/07/31 22:34:16.049 GMT (64160) parser              ...->'40882714'",
+        	"match": "(\\d{4}\\/\\d{2}\\/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}.\\d+\\s[A-Z]{3})\\s\\((\\d+)\\)\\s(parser)\\s+(.*)",
+            "headers": [
+                "timestamp",
+                "thread",
+                "func",
+                "data"
+            ],
+            "eventtype": "TelifEvent"
+        }
+        
+    ],
+    "newmsgs": true,
+    "send_interval": 10,
+    "send_max_events": 50,
+    "send_min_events": 1
+}

@@ -1,0 +1,16 @@
+{
+    "name": "InsightsLogReader",
+    "version": "0.1.0",
+    "description": "Log Reader for New Relic Insights",
+    "main": "app.js",
+    "dependencies": {
+        "log": "^1.3.0",
+        "insights": "^0.0.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+    },
+    "author": "Seth Schwartzman",
+    "license": "MIT",
+    "readmeFilename": "README.md"
+}
