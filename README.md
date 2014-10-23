@@ -35,7 +35,7 @@
 * `logfile` - Path and name of the log file you wish to tail.
 * `parsers` - An array of parsers, each of which will be run against the log file. 
 
-##### Parser settings 
+#### Parser settings 
 
 * `name` - (Optional) Name of the matching parse will appear in debug logs.
 * `comment` - (Optional) Anything you want can go here. Currently, I'm using it to store an example log line for this parser.
@@ -44,7 +44,8 @@
   * You MUST have as many header fields as you do match fields. For now.
 * `eventtype` (Optional) The type of event you want to put into Insights - can be anything. Defaults to 'LogEvent'
 
-###### `timestamp` in `headers`:
+##### `timestamp` in `headers`:
+
   * `timestamp` is a special header in Insights that can be populated from your data.
   * If you use `timestamp`, it must be parsing a standard date & time format. For example: `2014/07/01 21:23:09.841 GMT`
   * If the timestamp that is read is more than 24 hours old, it is ignored (Insights limitation).
