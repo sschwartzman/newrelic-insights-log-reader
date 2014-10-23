@@ -7,14 +7,8 @@ config.json
 
 *.backup
 
-config.json.p*
-
 *.out
 
 .dropbox
 
-config.json.backup
-
-config.json.pearson*
-
-config.json.verint*
+customer/*
