@@ -1,6 +1,6 @@
 {
-    "accountid": "284929",
-    "apikey": "5el17iPgSSWOby-KXhlVw-z9-cPejgIH",
+    "accountid": "Insert_your_account_ID_here",
+    "apikey": "Insert_your_API_key_here"
     "logfile": "/var/log/system.log",
     "parsers": [
         {

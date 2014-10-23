@@ -1,4 +1,5 @@
-## Log Reader for New Relic Insights
+# Insights Log Reader
+## A Log Reader for New Relic Insights
 
 ### Requirements
 
@@ -8,10 +9,11 @@
 
 ### Installation & Usage Overview
 
-1. Download the latest version of the agent
+1. Download the latest version of the agent: https://github.com/sschwartzman/Insights-Log-Reader/archive/master.zip
 2. Unzip on the server server that you want to monitor
-3. Configure `config.json` 
-  * [Click here for config.json config details](#configjson)
+3. Configure `config/config.json` 
+  * Start by copying `config.json.template` OR your pre-built `config.json` to `config/config.json`.
+  * [Click here for `config.json` configuration details](#configjson)
 4. Start agent using either the node command-line, or a wrapper package like [forever](https://github.com/nodejitsu/forever)
   * `nohup node /path/to/app.js > /path/to/InsightsLogReader.log 2>&1 &`
   * Directions for usage with [forever](https://github.com/nodejitsu/forever) coming soon...
@@ -35,7 +37,6 @@
 
 ##### Parser settings 
 
-Each parser has:
 * `name` - (Optional) Name of the matching parse will appear in debug logs.
 * `comment` - (Optional) Anything you want can go here. Currently, I'm using it to store an example log line for this parser.
 * `match` - Regular Expression used to search your log file. Read below in [Regex-ing Your Log](#regex) for details.
@@ -43,7 +44,7 @@ Each parser has:
   * You MUST have as many header fields as you do match fields. For now.
 * `eventtype` (Optional) The type of event you want to put into Insights - can be anything. Defaults to 'LogEvent'
 
-`timestamp` in `headers`:
+###### `timestamp` in `headers`:
   * `timestamp` is a special header in Insights that can be populated from your data.
   * If you use `timestamp`, it must be parsing a standard date & time format. For example: `2014/07/01 21:23:09.841 GMT`
   * If the timestamp that is read is more than 24 hours old, it is ignored (Insights limitation).
@@ -51,7 +52,7 @@ Each parser has:
   
 #### Optional settings
 
-* `newmsgs` - If set to true, the agent will only look for new log events. If false, the agent will read the whole log every time it is started.
+* `newmsgs` - If set to true, Insights Log Reader will only look for new log events. If false, Insights Log Reader will read the whole log every time it is started.
 * `send_interval` - how often (seconds) it will send events. Default is 10.
 * `send_max_events` - max # of events it will send in an interval. Default is 50.
 * `send_min_events` - min # of events necessary in an interval to send. Default is 10.
