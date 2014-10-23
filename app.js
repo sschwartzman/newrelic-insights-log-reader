@@ -22,6 +22,7 @@ function processLine(line, parsers, insights) {
 			// console.log("match: " + parser.name); //Debug
 			var i = 1;
 			var eventtype = parser.eventtype || 'LogEvent';
+			var starttime, endtime;
 			parser.headers.forEach(function(header) {
 				if (header === "timestamp") {
 					var timestamp = new Date(captured[i]).getTime();
@@ -33,14 +34,23 @@ function processLine(line, parsers, insights) {
 				} else {
 					insight[header] = trim(captured[i]);
 				}
+				
+				// For calculating duration if both start & end times are in record
+				if(header.toLowerCase().indexOf("starttime") > -1) {
+					starttime = new Date(captured[i]).getTime();	
+				} else if(header.toLowerCase().indexOf("endtime") > -1) {
+					endtime = new Date(captured[i]).getTime();	
+				}
 				i++;
 			});
+			if(starttime && endtime) {
+				insight["duration"] = endtime - starttime;
+			}
 			if(Object.keys(insight).length) {
 				insights.addEvent(eventtype, insight);
 				// console.log("insight:"); //Debug
 				// console.log(insight); //Debug
 			}
-			// console.log('');
 		});
 	} catch (err) {
 		// console.log(err); //Debug
@@ -49,7 +59,12 @@ function processLine(line, parsers, insights) {
 
 console.log("Log Reader for New Relic Insights");
 
+var whichfile = process.argv.slice(2);
+
 var cfile = __dirname + "/config.json";
+if(typeof whichfile != 'undefined')
+	cfile += "." + whichfile;
+console.log("Reading in config file: " + cfile);
 var config = JSON.parse(fs.readFileSync(cfile));
 var bookmark = 0; //Start at beginning of log unless otherwise spec'd
 var insights_options = {};
