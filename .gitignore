@@ -1,0 +1,16 @@
+
+*.log
+
+config.json
+
+*.err
+
+*.backup
+
+config.json.p*
+
+*.out
+
+.dropbox
+
+config.json.verint_speech
