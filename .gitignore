@@ -13,4 +13,8 @@ config.json.p*
 
 .dropbox
 
-config.json.verint_speech
+config.json.backup
+
+config.json.pearson*
+
+config.json.verint*
